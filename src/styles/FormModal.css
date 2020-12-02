@@ -1,0 +1,58 @@
+.modalBackground{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,0.7);
+}
+.modalBackgroundShow-true{
+    opacity: 1;
+    pointer-events: visible;
+    transition: opacity 1s ease-in-out;
+}
+
+.AppointmenElement{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding: 7px;
+}
+
+.AppointmentInner {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1e2939;
+    width: 400px;
+    max-width: calc(100% - 60px);
+    margin: auto;
+    color: #fff;
+    padding: 25px;
+}
+
+.AppointmentInner button{
+    border: none;
+    background-color: rgb(105, 209, 105);
+    padding: 10px;
+    margin-top: 25px;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.AppointmentInner h3{
+    text-align: center;
+}
+
+.AppointmentInner .FormClose{
+    text-align: right;
+    font-size: 1rem;
+    cursor: pointer;
+}

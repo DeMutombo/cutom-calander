@@ -1,0 +1,19 @@
+.Calander{
+    display: grid;
+    grid-template-columns: repeat(7, 150px);
+    grid-template-rows: repeat(5, 150px);
+    grid-gap: 5px;
+    justify-content: center;
+}
+
+.Calander-container h1{
+    text-align: center;
+}
+
+/* .Calander-box{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */

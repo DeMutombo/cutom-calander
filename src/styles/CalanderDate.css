@@ -1,0 +1,23 @@
+.CalanderDate{
+    opacity: 6;
+    background-color: lightgray;
+    transition: background-color  1s ease-in-out;
+    
+}
+.CalanderDate:hover{
+    background-color: rgb(22, 133, 105);
+color: #fff;
+    
+}
+
+.CalanderDate p{
+   text-align: center;
+}
+
+.info{
+    font-size: 12px;
+    text-align: left !important;
+    padding: 3px 3px;
+    line-height: 0.7px;
+}
+
