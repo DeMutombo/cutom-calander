@@ -21,6 +21,12 @@
     text-align: left !important;
     padding: 3px 3px;
     line-height: 0.7px;
+    
+}
+
+.single{
+    padding-bottom: 5px;
+    border-bottom: solid 1px gray;
 }
 
 .bg{
