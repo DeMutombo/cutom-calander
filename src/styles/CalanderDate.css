@@ -1,12 +1,14 @@
 .CalanderDate{
+    position: relative;
     opacity: 6;
     background-color: lightgray;
+    cursor: pointer;
     transition: background-color  1s ease-in-out;
     
 }
 .CalanderDate:hover{
     background-color: rgb(22, 133, 105);
-color: #fff;
+    color: #fff;
     
 }
 
@@ -19,5 +21,32 @@ color: #fff;
     text-align: left !important;
     padding: 3px 3px;
     line-height: 0.7px;
+}
+
+.bg{
+    font-weight: 700;
+    line-height: 1;
+    color:rgb(255, 255, 255);
+    opacity: 0.3;
+    font-size: 5em;
+    position: absolute;
+    top: .2em;
+    right: .05em;
+    letter-spacing: -.07em;
+}
+
+
+
+.bg:hover{
+    font-weight: 700;
+    line-height: 1;
+    color:rgb(14, 13, 13);
+    opacity: 0;
+    font-size: 8em;
+    position: absolute;
+    /* top: -.2em;
+    right: -.05em; */
+    transition: .25s ease-out;
+    letter-spacing: -.07em;
 }
 

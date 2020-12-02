@@ -20,7 +20,7 @@ function  CalanderDates2(props){
    const [currentDay, setCurrentDay] = useState()
    
    const addAppointment = (time)=>{
-        const times = {...time, booked:true}
+        const times = {...time, booked:true, counter:1}
         const newtime= [...appTime, times, ];
         setAppTime(newtime)
     }
@@ -45,6 +45,7 @@ function  CalanderDates2(props){
                             key={day}
                             day={day} 
                             id={day}
+                            count={day.counter}
                             data={appTime}
                             toggleModalState={toggleModalState}
                             
