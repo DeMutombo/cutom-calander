@@ -1,4 +1,5 @@
 // import React, { useState } from 'react'
+import {Link} from 'react-router-dom';
 import '../styles/CalanderDate.css'
 
 function  CaladerDate ({day, id, toggleModalState, data}) {
@@ -6,13 +7,15 @@ function  CaladerDate ({day, id, toggleModalState, data}) {
     // const [numOfAppointments, setNumOfAppointments] = useState()
     
     return (
-        <div  className="CalanderDate" onClick={()=>toggleModalState(id)}>  
+        <div  className="CalanderDate">  
+        <div style={{backgroundColor:'green', height:'15%', textAlign:'left', zIndex:5}} onClick={()=>toggleModalState(id)}>Add</div>
         <div className="bg">{day}</div>          
         {data.map((appT, index) =>  (appT.dayId === id) 
                 ?   <div className="single" key={index}>
-                      <p className="info">Name: {appT.name}</p>
+                      <Link to={`/user/${appT.name}`}> <p className="info">Name: {appT.name}</p>
                       <p className="info">Time:{appT.time}</p>
                       {/* {setNumOfAppointments(numOfAppointments + 1)} */}
+                      </Link>
                     </div>
                 : ''
             )}

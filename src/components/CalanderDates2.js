@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {Route, Switch} from 'react-router-dom'
 import CaladerDate from './caladerDate';
 import AppointmentForm from './AppointmentForm';
 import '../styles/Calander.css';
@@ -16,11 +17,13 @@ function  CalanderDates2(props){
     return localData ? setAppTime(JSON.parse(localData)) : [];    
    }, [])
 
+   // Hooks
    const [modalState, setModalState] = useState(false)
    const [currentDay, setCurrentDay] = useState()
    
-   const addAppointment = (time)=>{
-        const times = {...time, booked:true, counter:1}
+   
+   const addAppointment = (appointment)=>{
+        const times = {...appointment, booked:true, counter:1} // adding other properties to the appointment before sending it to main component from the form
         const newtime= [...appTime, times, ];
         setAppTime(newtime)
     }
