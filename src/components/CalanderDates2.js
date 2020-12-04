@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import {Route, Switch} from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import {v4 as uuidv4} from 'uuid'
 import CaladerDate from './caladerDate';
 import AppointmentForm from './AppointmentForm';
 import '../styles/Calander.css';
@@ -10,23 +10,26 @@ CalanderDates2.defaultProps = {
 }
 
 function  CalanderDates2(props){
-   const [appTime, setAppTime] =  useState([]);
+    // Hooks
+    const [modalState, setModalState] = useState(false)
+    const [currentDay, setCurrentDay] = useState()
+    const [appTime, setAppTime] =  useState([]);
    
+   //Loading data from loacal Storage
    useEffect(() => {
     const localData = localStorage.getItem('Appointment')
     return localData ? setAppTime(JSON.parse(localData)) : [];    
    }, [])
-
-   // Hooks
-   const [modalState, setModalState] = useState(false)
-   const [currentDay, setCurrentDay] = useState()
    
    
+   // appointment is a values being returned from the form
    const addAppointment = (appointment)=>{
-        const times = {...appointment, booked:true, counter:1} // adding other properties to the appointment before sending it to main component from the form
+        const times = {...appointment, booked:true, counter:1, id:uuidv4()} // adding other properties to the appointment before sending it to main component from the form
         const newtime= [...appTime, times, ];
         setAppTime(newtime)
     }
+
+    // Store appointment to local storage everytime apptime changes
     useEffect(() => {
         localStorage.setItem('Appointment', JSON.stringify(appTime))
     }, [appTime])

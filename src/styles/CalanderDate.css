@@ -2,7 +2,6 @@
     position: relative;
     opacity: 6;
     background-color: lightgray;
-    cursor: pointer;
     transition: background-color  1s ease-in-out;
     
 }
@@ -15,20 +14,41 @@
 .CalanderDate p{
    text-align: center;
 }
+.CalanderDate .add{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(49, 212, 172);
+    margin-left: 105px;
+    font-weight: 400;
+    border: none;
+    border-radius: 5%;
+    z-index: 3;
+}
 
 .info{
-    font-size: 12px;
+    font-size: 0.79rem;
     text-align: left !important;
     padding: 3px 3px;
     line-height: 0.7px;    
-    z-index: 5;
+    z-index: 2;
     
 }
 
 .single{
     padding-bottom: 5px;
     border-bottom: solid 1px gray;
+    cursor: pointer;
     z-index: 1;
+}
+
+.single a{
+    text-decoration: none;
+}
+.single a:hover{
+    color: white;
+    text-decoration: none;
 }
 
 .bg{
@@ -52,8 +72,6 @@
     opacity: 0;
     font-size: 8em;
     position: absolute;
-    /* top: -.2em;
-    right: -.05em; */
     transition: .25s ease-out;
     letter-spacing: -.07em;
 }

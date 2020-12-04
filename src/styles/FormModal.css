@@ -14,7 +14,7 @@
     opacity: 1;
     pointer-events: visible;
     transition: opacity 1s ease-in-out;
-    z-index: 3;
+    z-index: 4;
 }
 
 .AppointmenElement{
